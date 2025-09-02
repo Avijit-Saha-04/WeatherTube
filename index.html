@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherTube</title>
+  <link rel="icon" type="image/png" href="cloud.png">
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Weather Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">🌤 WeatherTube</div>
+    <!-- Removed the profile/person icon -->
+  </header>
+
+  <!-- Main content -->
+  <main class="main-content">
+    <div class="center-container">
+      <!-- Search bar centered -->
+      <div class="search-bar">
+        <input type="text" id="cityInput" placeholder="Search city...">
+        <button onclick="getWeather()">🔍</button>
+      </div>
+
+      <!-- Weather result -->
+      <div id="weatherResult" class="weather-result">
+        <h2>Search for a city to see the weather 🌍</h2>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

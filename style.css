@@ -1,0 +1,176 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-image 0.6s ease-in-out;
+  background-color: #0f0f0f; /* fallback dark */
+}
+
+/* Dark translucent header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #212121;   /* Dark gray from your image */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+/* Main content */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Remove box background */
+.center-container {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 12px 20px;
+  width: 400px;
+  border: none;
+  outline: none;
+  border-radius: 30px 0 0 30px;
+  background: #1c1c1c;
+  color: white;
+  font-size: 16px;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  border: none;
+  background: #ff0000; /* YouTube red */
+  color: white;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.search-bar button:hover {
+  background: #cc0000;
+}
+
+/* Weather results */
+.weather-result {
+  margin-top: 20px;
+}
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+ /* Responsive, centered search bar (replace old search-bar rules with these) */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  max-width: 640px; /* container max width */
+  margin: 0 auto;   /* centers the whole bar */
+  padding: 0 12px;  /* small horizontal padding on narrow screens */
+}
+
+/* input flexes to take available space on wide screens */
+.search-bar input {
+  flex: 1;
+  min-width: 0;           /* allows flex shrinking on very small screens */
+  max-width: 420px;       /* keeps desktop from getting too wide */
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  border-radius: 30px 0 0 30px;
+  background: #1c1c1c;
+  color: white;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  border: none;
+  background: #ff0000;
+  color: white;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Mobile: stack and center */
+@media (max-width: 600px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch; /* children fill the container width */
+    gap: 10px;
+    padding: 0 5%;
+  }
+
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+    border-radius: 30px; /* full-rounded for stacked layout */
+  }
+
+  .search-bar input { margin-bottom: 0; } /* gap handles spacing */
+}
+
+
+  .weather-result h2 {
+    font-size: 18px;
+  }
+
+  .weather-result h3 {
+    font-size: 16px;
+  }
+
+  .header {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 350px) {
+  .logo {
+    font-size: 16px;
+  }
+
+  .search-bar input,
+  .search-bar button {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
